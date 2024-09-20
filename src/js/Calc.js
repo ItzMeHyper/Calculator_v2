@@ -1,8 +1,9 @@
 let display = document.getElementById('display');
 
 const clickSound = new Audio('src/effects/click1.mp3');
-const errSound = new Audio('src/effects/err.mp3');
+const errSound = new Audio('src/effects/err2.mp3');
 const clrSound = new Audio('src/effects/clear.mp3');
+const mteSound = new Audio('src/effects/mute2.mp3');
 
 let isMuted = false;
 
@@ -11,12 +12,19 @@ function toggleMute(value) {
 
     const muteIcon = document.getElementById('mute-icon');
     if (isMuted) {
+        muteSound();
         muteIcon.classList.remove('fa-volume-up');
         muteIcon.classList.add('fa-volume-mute');
     } else {
+        muteSound();
         muteIcon.classList.remove('fa-volume-mute');
         muteIcon.classList.add('fa-volume-up');
     }
+}
+
+function muteSound() {
+    mteSound.currentTime = 0;
+    mteSound.play();
 }
 
 function playSound() {
@@ -86,5 +94,6 @@ document.addEventListener('keydown', (event) => {
         playClrSound();
     } else if(key == 'm' || key === 'M'){
         toggleMute();
+        muteSound();
     }
 });
