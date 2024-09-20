@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator | Hyper</title>
+    <link rel="stylesheet" href="Calc.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="calculator">
+      <header>
+        <i class="fa-solid fa-calculator" style="color: #5333dc"></i>
+        <h1>Calculator</h1>
+      </header>
+      <input id="display" readonly />
+      <div id="keys">
+        <button onclick="clearDisplay()" class="ACoperator-btn">AC</button>
+        <button onclick="dltChar()" class="operator-btn">
+          <i class="fas fa-backspace"></i>
+        </button>
+        <button onclick="appendToDisplay('%')" class="operator-btn">%</button>
+        <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+
+        <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+
+        <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+
+        <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+        <button onclick="appendToDisplay('0')" style="grid-column: span 2">
+          0
+        </button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="calculate()" class="operator-btn">=</button>
+      </div>
+    </div>
+
+    <button id="mute-btn" onclick="toggleMute()" aria-label="Mute/Unmute">
+        <i class="fa-solid fa-volume-high fa-beat" id="mute-icon"></i>
+    </button>
+
+    <script src="src/js/Calc.js"></script>
+  </body>
+</html>

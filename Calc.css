@@ -1,0 +1,137 @@
+body {
+    background: url('src/images/CalcBg2.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(245, 245, 245, 1);
+}
+#calculator {
+    font-family: 'Poppins', sans-serif;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    max-width: 100%;
+    width: 350px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    gap: 10px;
+}
+header i {
+    font-size: 24px;
+    padding: auto;
+}
+header h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #5333dc;
+    padding: auto;
+}
+
+#display {
+    width: 90%;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: right;
+    border: none;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+button {
+    width: 100%;
+    height: 70px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(145deg, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+button:hover {
+    background: linear-gradient(145deg, rgba(142, 68, 173, 1), rgba(52, 152, 219, 1));
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+button:active {
+    background: linear-gradient(145deg, rgba(155, 89, 182, 1), rgba(41, 128, 185, 1));
+    transform: scale(1.02);
+}
+.operator-btn {
+    background: linear-gradient(145deg, rgba(255, 152, 0, 1), rgba(255, 87, 34, 1));
+}
+.operator-btn:hover {
+    background: linear-gradient(145deg, rgba(255, 167, 38, 1), rgba(255, 112, 67, 1));
+}
+.operator-btn:active {
+    background: linear-gradient(145deg, rgba(255, 183, 77, 1), rgba(255, 138, 101, 1));
+}
+.ACoperator-btn {
+    background: linear-gradient(145deg, rgba(231, 76, 60, 1), rgba(192, 57, 43, 1));
+}
+.ACoperator-btn:hover {
+    background: linear-gradient(145deg, rgba(240, 96, 84, 1), rgba(211, 72, 54, 1));
+}
+.ACoperator-btn:active {
+    background: linear-gradient(145deg, rgba(241, 122, 106, 1), rgba(217, 88, 70, 1));
+}
+
+#mute-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    backdrop-filter: blur(10px);
+    border: none;
+    cursor: pointer;
+    color: #5333dc;
+    font-size: 18px;
+    width: 50px; 
+    height: 50px; 
+}
+#mute-btn:hover {
+    color: #e32d2d;
+}
+#mute-btn i {
+    font-size: inherit;
+}
+
+@media (max-width: 500px) {
+    #display {
+        font-size: 2rem;
+    }
+    button {
+        font-size: 1.5rem;
+        height: 60px;
+    }
+}
+@media (max-width: 320px) {
+    #display {
+        font-size: 1.8rem;
+    }
+    button {
+        font-size: 1.6rem;
+        height: 50px;
+    }
+}
