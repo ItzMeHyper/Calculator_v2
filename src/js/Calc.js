@@ -6,7 +6,7 @@ const clrSound = new Audio('src/effects/clear.mp3');
 
 let isMuted = false;
 
-function toggleMute() {
+function toggleMute(value) {
     isMuted = !isMuted;
 
     const muteIcon = document.getElementById('mute-icon');
@@ -84,5 +84,7 @@ document.addEventListener('keydown', (event) => {
     } else if (key === 'Escape') {
         clearDisplay();
         playClrSound();
+    } else if(key == 'm' || key === 'M'){
+        toggleMute();
     }
 });
